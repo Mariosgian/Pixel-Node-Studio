@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Node Studio - Crafting exceptional digital experiences with clean, modern web design and development services.">
+    <meta property="og:title" content="Pixel Node Studio | Web Design & Development">
+    <meta property="og:description" content="We build beautiful, functional websites that help your business stand out.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelnodestudio.com">
+    <title>Pixel Node Studio | Web Design & Development</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔷</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --accent: #2563eb; /* blue-600 */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+        .accent-text {
+            color: var(--accent);
+        }
+        .accent-bg {
+            background-color: var(--accent);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .testimonial-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+ <!-- Navigation -->
+ <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="flex items-center justify-between h-20">
+  
+      <!-- LOGO Full Left -->
+      <div class="flex items-center pl-4">
+        <span class="text-3xl font-bold text-blue-600 mr-1">PIXEL NODE</span>
+        <span class="text-3xl font-bold text-black">STUDIO</span>
+      </div>
+  
+      <!-- NAV LINKS -->
+      <div class="hidden md:flex items-center space-x-8 pr-6">
+        <a href="#home" class="nav-link text-sm font-medium">Home</a>
+        <a href="#about" class="nav-link text-sm font-medium">About</a>
+        <a href="#work" class="nav-link text-sm font-medium">Work</a>
+        <a href="#services" class="nav-link text-sm font-medium">Services</a>
+        <a href="#pricing" class="nav-link text-sm font-medium">Pricing</a>
+        <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+      </div>
+  
+      <!-- Mobile Menu Icon -->
+      <div class="md:hidden pr-4">
+        <button id="menu-toggle" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+  
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+                Websites That Perform. <br />
+                <span class="accent-text">Brands That Grow.</span>
+              </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-600">We blend clean design with smart development to help brands thrive online.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="accent-bg hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md hover-scale transition duration-300">Let's Build Something Great</a>
+                <a href="#work" class="border-2 border-gray-800 hover:bg-gray-100 text-gray-800 font-medium py-3 px-8 rounded-md hover-scale transition duration-300">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">WHO WE ARE</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Pixel Node Studio</h3>
+                    <p class="text-lg text-gray-600 mb-6">At Pixel Node Studio, we specialize in crafting strategic websites that align design with purpose. We're an
+                        independent web design and development studio dedicated to helping businesses stand out online through clean visuals, intuitive UX, and performance-driven
+                         builds. Every project is custom-made — no templates, no shortcuts — just thoughtful digital craftsmanship tailored to your goals. Whether you're a 
+                         startup, a local business, or a growing brand, we work closely with you to deliver a site that not only looks great, but actually works.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">Responsive Design</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">HTML</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">CSS</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">SEO Basics</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">Visual Studio code</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">Github</span>
+                        <span class="bg-gray-200 px-4 py-2 rounded-full text-sm font-medium">Figma</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative bg-white p-6 rounded-lg shadow-xl hover-scale">
+                        <!-- Image with overlay text -->
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden relative">
+                          <img src="images/about.jpg" alt="Pixel Node Studio Logo on Laptop" class="w-full h-full object-cover">
+                      
+                          <!-- Text overlayed inside the image box -->
+                          <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 px-4 py-3 text-center">
+                            <h4 class="text-lg font-bold text-gray-900">FROM IDEA TO IMPACT</h4>
+                            <p class="text-sm text-gray-700">Clarify → Create → Launch → Optimize → Scale</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work/Portfolio Section -->
+    <section id="work" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">OUR WORK</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                        <img src="images/image1.jpg" alt="Artisan Bakery" class="rounded-t-lg w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">A modern bakery</h3>
+                        <p class="text-gray-600 mb-4">A cozy bakery website with warm visuals, showcasing handcrafted goods and location info.</p>
+                        <a href="https://mariosgian.github.io/Bakery/" class="inline-block accent-text font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                        <img src="images/image2.jpg" alt="Project 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">A Personal trainer's site</h3>
+                        <p class="text-gray-600 mb-4">A bold personal trainer site featuring service packages, testimonials, and booking tools.</p>
+                        <a href="https://mariosgian.github.io/Personal-Trainer/" class="inline-block accent-text font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                        <img src="images/image3.jpg" alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">A Digital agency</h3>
+                        <p class="text-gray-600 mb-4">A sleek multi-section site highlighting services, process, and client work for a creative studio.</p>
+                        <a href="https://mariosgian.github.io/Creative-Digital-Agency/" class="inline-block accent-text font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">OUR SERVICES</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Brand Discovery</h3>
+                    <p class="text-gray-600"> We uncover what makes your business unique, collaborate with you to define your goals, your target audience, and we lay together the strategic foundation for a high-impact website.
+                        </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Web Design</h3>
+                    <p class="text-gray-600">Beautiful, responsive designs made to fit. Your site is crafted from scratch—no templates, just unique designs that reflect your brand’s identity and message.
+                        .</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Front-End Development</h3>
+                    <p class="text-gray-600">Clean code that brings design to life. We build fast, responsive websites using semantic HTML, CSS, JavaScript, and Tailwind for a seamless user experience.
+                        </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+                </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                <p class="text-gray-600">Built to be found. From structured content to performance tweaks, we ensure your site is optimized for higher visibility in search engines.</p>
+                </div>
+
+                <!-- Service 5 -->
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+            <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16" />
+            </svg>
+             </div>
+            <h3 class="text-xl font-bold mb-3">Landing Page Design</h3>
+            <p class="text-gray-600">Conversion-focused, campaign-ready pages. We create standalone pages designed to capture leads, promote offers, or drive a single powerful action.</p>
+            </div>
+                
+               <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 hover-scale">
+            <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+            </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Maintenance & Support</h3>
+            <p class="text-gray-600">Peace of mind after launch. We offer regular updates, performance monitoring, and support to keep your website secure and running smoothly.</p>
+            </div>
+            </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">PRICING</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Choose the plan that fits your goals. Whether you're starting small or scaling up, we’ve got you covered.</p>
+              </div>
+          
+              <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic -->
+                <div class="border rounded-lg shadow-md hover:shadow-xl p-8 hover-scale transition duration-300">
+                  <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                  <p class="text-gray-600 mb-6">Perfect for simple websites or personal brands.</p>
+                  <div class="text-4xl font-bold text-blue-600 mb-6">€329</div>
+                  <ul class="space-y-3 text-gray-700">
+                    <li>✔ One-page custom design</li>
+                    <li>✔ Mobile responsive</li>
+                    <li>✔ Contact form</li>
+                    <li>✔ Basic SEO setup</li>
+                    <li>✖ Ongoing support</li>
+                  </ul>
+                  <a href="#contact" class="block mt-8 text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition">Get Started</a>
+                </div>
+          
+                <!-- Professional -->
+                <div class="border-2 border-blue-600 rounded-lg shadow-lg p-8 hover-scale transition duration-300 bg-gray-50">
+                  <h3 class="text-2xl font-bold mb-4">Professional</h3>
+                  <p class="text-gray-600 mb-6">Ideal for small businesses and growing brands.</p>
+                  <div class="text-4xl font-bold text-blue-600 mb-6">€569</div>
+                  <ul class="space-y-3 text-gray-700">
+                    <li>✔ Multi-section site</li>
+                    <li>✔ Mobile responsive</li>
+                    <li>✔ Contact & lead form</li>
+                    <li>✔ SEO optimization</li>
+                    <li>✔ 1 month support</li>
+                  </ul>
+                  <a href="#contact" class="block mt-8 text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition">Get Started</a>
+                </div>
+          
+                <!-- Premium -->
+                <div class="border rounded-lg shadow-md hover:shadow-xl p-8 hover-scale transition duration-300">
+                  <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                  <p class="text-gray-600 mb-6">For ambitious businesses that need full support.</p>
+                  <div class="text-4xl font-bold text-blue-600 mb-6">€880+</div>
+                  <ul class="space-y-3 text-gray-700">
+                    <li>✔ Full custom website</li>
+                    <li>✔ Animations & interactions</li>
+                    <li>✔ Performance optimization</li>
+                    <li>✔ SEO & analytics integration</li>
+                    <li>✔ 3 months support</li>
+                  </ul>
+                  <a href="#contact" class="block mt-8 text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition">Get Started</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">GET IN TOUCH</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <form id="contact-form" class="grid grid-cols-1 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name(Business/Owner)</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message(details of what you want)</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full accent-bg hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md hover-scale transition duration-300">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">PIXEL NODE STUDIO</span>
+                    <p class="mt-2 text-gray-400">Crafting digital experiences that matter.</p>
+                </div>
+                <div class="flex space-x-6 mt-4">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/pixel.nodes" target="_blank" aria-label="Instagram" class="text-gray-400 hover:text-pink-500 transition duration-300">
+                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3a5.75 5.75 0 1 1 0 11.5 5.75 5.75 0 0 1 0-11.5zm0 1.5a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zm5.5-.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                      </svg>
+                    </a>
+                  
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-600 transition duration-300">
+                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.23 8h4.54v13H.23V8zm7.91 0h4.35v1.8h.06c.6-1.13 2.07-2.3 4.26-2.3 4.56 0 5.4 3 5.4 6.9v7.6h-4.54v-6.73c0-1.61-.03-3.7-2.25-3.7-2.25 0-2.6 1.76-2.6 3.57V21H8.14V8z"/>
+                      </svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:pixelnodestudio.web@gmail.com" target="_blank" aria-label="Email" class="text-gray-400 hover:text-red-500 transition duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+                    </svg>
+                </a>
+                  </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Pixel Node Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real implementation, you would send this data to a server
+            console.log('Form submitted:', { name, email, message });
+            
+            // Show success message
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add scroll animation class when elements come into view
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- Testimonials Section 
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">CLIENT TESTIMONIALS</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                   Testimonial 1 
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">CEO, GreenLeaf Organics</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Pixel Node transformed our online presence. Our new website has increased inquiries by 40% and perfectly represents our brand values."</p>
+                    <div class="mt-4 flex">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+                
+                 Testimonial 2 
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Founder, TechForward</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The team understood our vision immediately. The site they delivered exceeded our expectations in both design and functionality."</p>
+                    <div class="mt-4 flex">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+                
+                 Testimonial 3 
+                <div class="testimonial-card bg-white p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Marketing Director, Urban Spaces</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Working with Pixel Node was seamless. Their attention to detail and commitment to our project timeline was impressive."</p>
+                    <div class="mt-4 flex">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
