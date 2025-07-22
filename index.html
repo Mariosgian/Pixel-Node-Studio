@@ -77,16 +77,16 @@
 <body class="bg-white text-gray-800">
 
  <!-- Navigation -->
- <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
     <div class="flex items-center justify-between h-20">
-  
-      <!-- LOGO Full Left -->
+      
+      <!-- LOGO -->
       <div class="flex items-center pl-4">
         <span class="text-3xl font-bold text-blue-600 mr-1">PIXEL NODE</span>
         <span class="text-3xl font-bold text-black">STUDIO</span>
       </div>
   
-      <!-- NAV LINKS -->
+      <!-- NAV LINKS (Desktop only) -->
       <div class="hidden md:flex items-center space-x-8 pr-6">
         <a href="#home" class="nav-link text-sm font-medium">Home</a>
         <a href="#about" class="nav-link text-sm font-medium">About</a>
@@ -106,6 +106,16 @@
         </button>
       </div>
   
+    </div> <!-- ✅ Κλείνει το flex container -->
+  
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-4 px-4 pb-4">
+      <a href="#home" class="nav-link text-sm font-medium">Home</a>
+      <a href="#about" class="nav-link text-sm font-medium">About</a>
+      <a href="#work" class="nav-link text-sm font-medium">Work</a>
+      <a href="#services" class="nav-link text-sm font-medium">Services</a>
+      <a href="#pricing" class="nav-link text-sm font-medium">Pricing</a>
+      <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
     </div>
   </nav>
 
